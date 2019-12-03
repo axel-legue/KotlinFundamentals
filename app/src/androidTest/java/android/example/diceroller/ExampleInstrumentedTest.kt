@@ -1,4 +1,4 @@
-package android.example.com
+package android.example.diceroller
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
