@@ -46,4 +46,5 @@ class MainActivity : AppCompatActivity() {
         }
         resultText.text = diceNumber.toString()
     }
+
 }
