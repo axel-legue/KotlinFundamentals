@@ -2,7 +2,7 @@ package com.example.android.diceroller
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rollButton: Button
     private lateinit var countUpButton: Button
     private lateinit var resetButton: Button
-    private lateinit var resultText: TextView
+    private lateinit var diceImage: ImageView
     private var diceNumber = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,21 +21,20 @@ class MainActivity : AppCompatActivity() {
         rollButton = findViewById(R.id.roll_button)
         countUpButton = findViewById(R.id.count_button)
         resetButton = findViewById(R.id.reset_button)
-        resultText = findViewById(R.id.result_text)
+        diceImage = findViewById(R.id.dice_img)
         rollButton.setOnClickListener { rollDice() }
         countUpButton.setOnClickListener { countUp() }
         resetButton.setOnClickListener { resetDice() }
     }
 
     private fun rollDice() {
-
         diceNumber = Random().nextInt(6) + 1
-        resultText.text = diceNumber.toString()
+        pickDiceImage(diceNumber)
     }
 
     private fun resetDice() {
         diceNumber = 0
-        resultText.text = diceNumber.toString()
+        pickDiceImage(diceNumber)
     }
 
     private fun countUp() {
@@ -43,8 +42,23 @@ class MainActivity : AppCompatActivity() {
             // Do nothing
         } else {
             diceNumber += 1
+            pickDiceImage(diceNumber)
         }
-        resultText.text = diceNumber.toString()
+    }
+
+    private fun pickDiceImage(value: Int) {
+        when (value) {
+            1 -> diceImage.setImageResource(R.drawable.dice_1)
+            2 -> diceImage.setImageResource(R.drawable.dice_2)
+            3 -> diceImage.setImageResource(R.drawable.dice_3)
+            4 -> diceImage.setImageResource(R.drawable.dice_4)
+            5 -> diceImage.setImageResource(R.drawable.dice_5)
+            6 -> diceImage.setImageResource(R.drawable.dice_6)
+            else -> { // Note the block
+                diceImage.setImageResource(R.drawable.empty_dice)
+            }
+        }
+
     }
 
 }
