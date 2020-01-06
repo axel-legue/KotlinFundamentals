@@ -10,6 +10,13 @@ import androidx.fragment.app.DialogFragment
 class ConfirmDeleteDialogFragment : DialogFragment() {
     val TAG = ConfirmDeleteDialogFragment::class.java.simpleName
 
+    interface ConfirmDeleteListener {
+        fun onDialogPositiveClick()
+        fun onDialogNegativeClick()
+    }
+
+    var listener: ConfirmDeleteListener? = null
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         // Patern Builder
         val builder = AlertDialog.Builder(activity)
@@ -19,10 +26,12 @@ class ConfirmDeleteDialogFragment : DialogFragment() {
                 object : DialogInterface.OnClickListener {  // anonymous class
                     override fun onClick(dialog: DialogInterface?, id: Int) {
                         Log.i(TAG, "Yeah we will break everything")
+                        listener?.onDialogPositiveClick()
                     }
                 })
             .setNegativeButton("Euh ... No", DialogInterface.OnClickListener { dialog, id ->
                 Log.i(TAG, "Maybe next time !!")
+                listener?.onDialogNegativeClick()
             })
 
         return builder.create()
