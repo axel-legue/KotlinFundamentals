@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.android.diceroller">
+        package="com.example.android.diceroller">
 
     <application
             android:allowBackup="true"
@@ -9,37 +9,37 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".AbstractActivity"
-                  android:exported="true">
-        </activity>
-        <activity android:name=".EncapsulationActivity"
-                  android:exported="true">
-        </activity>
-        <activity android:name=".HeritageActivity"
-                  android:exported="true">
-        </activity>
+        <activity
+                android:name=".DialogActivity"
+                android:exported="true" />
+        <activity
+                android:name=".AbstractActivity"
+                android:exported="true" />
+        <activity
+                android:name=".EncapsulationActivity"
+                android:exported="true" />
+        <activity
+                android:name=".HeritageActivity"
+                android:exported="true" />
         <activity
                 android:name=".ClassConstructorActivity"
-                android:exported="true">
-        </activity>
+                android:exported="true" />
         <activity
                 android:name=".WhileLoopActivity"
-                android:exported="true">
-        </activity>
+                android:exported="true" />
         <activity
                 android:name=".ForLoopActivity"
-                android:exported="true">
-        </activity>
+                android:exported="true" />
         <activity
                 android:name=".ArrayActivity"
-                android:exported="true">
-        </activity>
+                android:exported="true" />
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
     </application>
