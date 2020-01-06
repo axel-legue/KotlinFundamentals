@@ -7,4 +7,7 @@
     <string name="documents">Documents</string>
     <string name="videos">Videos</string>
     <string name="musics">Musics</string>
+    <string name="menu_add">Add</string>
+    <string name="men_delete">Delete</string>
+    <string name="menu_mail">Mail</string>
 </resources>
