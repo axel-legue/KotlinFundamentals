@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context="com.example.android.diceroller.ThemeActivity">
+
+    <TextView
+            android:id="@+id/tv_hello"
+            style="@style/TitleFont.Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_bottom"
+            android:text="@string/title_hello" />
+
+    <TextView
+            android:id="@+id/tv_content"
+            style="@style/TitleFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_bottom"
+            android:text="@string/content" />
+
+    <Button
+            android:id="@+id/button_click_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_bottom"
+            android:text="@string/text_button"
+            android:textAllCaps="true" />
+
+    <EditText
+            android:id="@+id/et_hint"
+            style="@style/FormEditText"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_bottom"
+            android:hint="@string/hint" />
+
+    <EditText
+            android:id="@+id/et_2"
+            style="@style/FormEditText"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_bottom"
+            android:hint="@string/second_edit_text" />
+
+
+</LinearLayout>
