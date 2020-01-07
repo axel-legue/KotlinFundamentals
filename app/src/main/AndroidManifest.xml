@@ -10,6 +10,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".RecyclerViewActivity"
+                android:exported="true" />
+        <activity
                 android:name=".FavoriteActivity"
                 android:parentActivityName=".ToolbarActivity" />
         <activity
