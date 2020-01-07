@@ -15,4 +15,6 @@
     <string name="text_button">Click me</string>
     <string name="hint">hint...</string>
     <string name="second_edit_text">Second Edit Text</string>
+    <string name="toolbar_favorite">Favorite</string>
+    <string name="toolbar_delete">Delete</string>
 </resources>
